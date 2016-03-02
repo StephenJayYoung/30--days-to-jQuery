@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery Events</title>
+</head>
+<link rel="stylesheet" type="text/css" href="lesson5.css">
+<body>
+	<script src="jquery.js"></script>
+
+
+
+	<h1>Website Title</h1>
+
+
+<dl>
+	<dt>What are your hours</dt>
+	<dd>We are open 24/7</dd>
+	<dt>What are your hours</dt>
+	<dd>We are open 24/7</dd>
+	<dt>What are your hours</dt>
+	<dd>We are open 24/7</dd>
+	<dt>What are your hours</dt>
+	<dd>We are open 24/7</dd>
+	<dt>What are your hours</dt>
+	<dd>We are open 24/7</dd>
+</dl>
+
+
+
+<!-- Example 1 -->
+<script>
+// 	(function() {
+
+// 		var dd = $('dd');
+
+// 		dd.addClass('hide');
+
+// })();
+
+</script>
+
+
+<!-- Example 2 -->
+<script>
+// 	(function() {
+
+// 		var dd = $('dd');
+
+// 		dd.filter(':nth-child(n+4)').addClass('hide');
+
+// 		$('dt').on('mouseenter', function() {
+// 				$(this).next().siblings('dd').hide();
+// 				$(this).next().show();
+// 		})
+
+// })();
+
+</script>
+
+<!-- Example 2 optimized -->
+<script>
+// 	(function() {
+
+// 		var dd = $('dd');
+
+// 		dd.filter(':nth-child(n+4)').addClass('hide');
+
+// 		$('dt').on('mouseenter', function() {
+// 				$(this)
+// 					.next()
+// 					.slideDown(200)
+// 						.siblings('dd').
+// 							slideUp(200);
+// 		});
+
+// })();
+
+</script>
+
+<!-- Example 2 optimized again -->
+<script>
+	(function() {
+
+		$('dd').filter(':nth-child(n+4)').addClass('hide');
+
+		$('dl').on('mouseenter', 'dt', function() {
+				$(this)
+					.next()
+					.slideDown(200)
+						.siblings('dd').
+							slideUp(200);
+		});
+
+})();
+
+</script>
+
+
+</body>
+</html>
