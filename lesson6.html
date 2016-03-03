@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery Events</title>
+</head>
+<link rel="stylesheet" type="text/css" href="lesson5.css">
+<body>
+	<script src="jquery.js"></script>
+
+
+<h2>Click Me</h2>
+
+
+
+<!-- Example 1 -->
+<script>
+// 	(function() {
+
+// 		$('h2').click(function() {
+// 			console.log('it was clicked!');
+
+// 		});
+
+// })();
+</script>
+
+<!-- Example 2 -->
+<script>
+	(function() {
+
+		$('h2').bind('click', function() {
+			var cloned = $(this).clone();
+			$(this).clone().appendTo('body');
+		});
+
+})();
+</script>
+
+
+</body>
+</html>
