@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery Events</title>
+</head>
+<link rel="stylesheet" type="text/css" href="lesson5.css">
+<body>
+	<script src="jquery.js"></script>
+
+<title>Appending content</title>
+
+<article>
+	<h1> My Blog Post</h1>
+
+	<p>Some content here</p>
+	<p>Some more content here ya ya ya</p>
+</article>
+
+<!-- Example 1 -->
+<script>
+	(function() {
+
+		// $('h1').before('hello from the javaScript')
+		// $('h1').after('hello from the javaScript')
+		// $('h1').first().before('hello from the javaScript')
+		// 
+		// insert it into the html
+		// $('<h2>Hi from JS</h2>').appendTo('article')
+		// This is a better way to do that:
+		$('<h2></h2>', {
+				text: 'Hello From JS!',
+				class: 'myClass'
+		}).insertBefore('p:nth-child(3)'); 
+
+})();
+</script>
+
+
+</body>
+</html>
