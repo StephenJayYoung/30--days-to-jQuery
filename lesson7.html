@@ -13,7 +13,7 @@
 	<h1> My Blog Post</h1>
 
 	<p>Some content here</p>
-	<p>Some more content here ya ya ya</p>
+	<p> <span class="co">Some more content</span> here ya ya ya</p>
 </article>
 
 <!-- Example 1 -->
@@ -27,10 +27,20 @@
 		// insert it into the html
 		// $('<h2>Hi from JS</h2>').appendTo('article')
 		// This is a better way to do that:
-		$('<h2></h2>', {
-				text: 'Hello From JS!',
-				class: 'myClass'
-		}).insertBefore('p:nth-child(3)'); 
+		// $('<h2></h2>', {
+		// 		text: 'Hello From JS!',
+		// 		class: 'myClass'
+		// }).insertBefore('p:nth-child(3)'); 
+
+	// $('p').eq(0).after(function() {
+	// 	return $(this).prev();
+	// });
+	//
+(function() {
+		var co = $('span.co').each(function() {
+			$(this).closest('p').prepend('hi there youuuuuuuuu');
+		});
+
 
 })();
 </script>
